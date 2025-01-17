@@ -30,3 +30,6 @@ jobs:
 
     - name: Get GKE credentials
       run: gcloud container clusters get-credentials autopilot-cluster-1 --region us-central1 --project seismic-operand-439620-s8
+
+    - name: Deploy to GKE
+      run: helm install flask ./flask
